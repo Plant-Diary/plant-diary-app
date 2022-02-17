@@ -5,11 +5,11 @@ const path = require("path");
 module.exports = {
   entry: {
     app: {
-      import: "./index.js",
+      import: "./src/index.js",
     },
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
   },
   module: {
     rules: [
@@ -28,6 +28,6 @@ module.exports = {
   },
   plugins: [
     new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin({ template: "./index.html" }),
+    new HtmlWebpackPlugin({ template: "./public/index.html" }),
   ],
 };
